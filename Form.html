@@ -102,9 +102,8 @@ hr.sectionbreak { height:1px; color: #ccc; }
 </div>
 
 
-
 <div id="frmFormMailContainer">
-    <form name="frmFormMail" id="frmFormMail"  action="https://formsubmit.co/1842d63db9102af9b775bc2e66cb0067" method="POST">
+    <form name="frmFormMail" id="frmFormMail">
         <input type="hidden" name="formmail_submit" value="Y">
     
         <div class="field_block" id="field_0_div">
@@ -131,8 +130,31 @@ hr.sectionbreak { height:1px; color: #ccc; }
             </div>
         </div>
     
-        <input id="enviar_info" type="submit" value="Enviar"/>
+        <button id="enviar_info">Enviar</button>
     </form>
     
-</div>  
+</div>
 
+<script>
+    const form = document.getElementById('frmFormMail');
+    const enviarButton = document.getElementById('enviar_info');
+
+    enviarButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Evitar el comportamiento por defecto del botón
+        
+        const formData = new FormData(form);
+
+        fetch('https://formsubmit.co/1842d63db9102af9b775bc2e66cb0067', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Manejar la respuesta si es necesario
+            console.log('Respuesta del servidor:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+</script>
