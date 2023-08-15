@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC >
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     
+   
+    
+
+    <link rel="stylesheet" href="Css/Button.css">
+</head>
+<body>
+
+<style type="text/css">
+
+.center, body, .menu .menu-icon, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.none {
+  display: none !important;
+}
+
+@media screen and (min-width: 860px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+form {
+  width: 15.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 4rem;
+  text-align: left;
+  cursor: default;
+}
+
+form h1 {
+  font-size: 2.375rem;
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: 1.125rem;
+}
+
+form p,
+form label {
+  color: #5a5a5a;
+  letter-spacing: 0.0625rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+
+form p {
+  width: 100%;
+  margin-bottom: 1.125rem;
+}
+
+form label {
+  font-size: 0.5625rem;
+  font-weight: 500;
+  margin-left: 0.875rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-transform: translateY(1.25rem);
+          transform: translateY(1.25rem);
+}
+
+form label.selected {
+  -webkit-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
+  color: #1e1e20;
+}
+
+form input {
+  margin-bottom: 0.75rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  height: 1.875rem;
+  font-size: 0.75rem;
+  border: none;
+  border-bottom: 0.0625rem solid #ddd;
+  background-color: transparent;
+  padding: 0.375rem;
+}
+
+form input:active, form input:focus,
+form textarea:active,
+form textarea:focus {
+  border-bottom: 0.0625rem solid #5a5a5a;
+  outline: none;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 2rem;
+  max-height: 4.1rem;
+  scrollbar-width: thin;
+}
+
+form textarea::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+form textarea::-webkit-scrollbar-track {
+  background: #e6e6e6;
+}
+
+form textarea::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border: 0.0625rem solid transparent;
+}
+
+form input[type="submit"] {
+  margin-top: 1.5rem;
+  background-color: #1e1e20;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  font-size: 0.5rem;
+  cursor: pointer;
+  border-bottom: none;
+  -webkit-transition: -webkit-box-shadow 0.1s ease-in-out;
+  transition: -webkit-box-shadow 0.1s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out, -webkit-box-shadow 0.1s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  -webkit-box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu .icon {
+  position: absolute;
+  top: 1rem;
+  width: 70%;
+}
+
+@media screen and (max-width: 860px) {
+  .menu .icon {
+    height: 100%;
+    position: relative;
+    left: 1rem;
+    top: 0;
+  }
+  .menu svg {
+    height: 100%;
+  }
+}
+
+.menu .menu-icon {
+  height: 2.5rem;
+  width: 100%;
+  background-color: #5e5b4e;
+  cursor: pointer;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+
+.menu .menu-icon svg {
+  width: 60%;
+}
+
+.menu .menu-icon:hover {
+  color: #fff;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social .logos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16%;
+}
+
+.social .logos .icon {
+  height: 1rem;
+  width: 1rem;
+  text-align: center;
+}
+
+.social .logos .icon svg {
+  height: 100%;
+  -webkit-transition: fill 0.1s ease-in-out;
+  transition: fill 0.1s ease-in-out;
+}
+
+.social .logos .icon:hover svg {
+  fill: #fff;
+}
+
+body .first-page .intro .intro-text button:hover {
+  background-color: #52b788;
+  cursor: pointer;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #fff;
+  padding: 1.875rem;
+  cursor: default;
+  position: relative;
+}
+
+.info::before {
+  position: absolute;
+  content: "";
+  top: -0.9375rem;
+  left: -0.9375rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  z-index: 100;
+  background-color: #ffdf3c;
+}
+
+@media screen and (max-width: 720px) {
+  .info::before {
+    top: -0.9375rem;
+    left: 0rem;
+  }
+}
+
+.info h2 {
+  font-size: 1.25rem;
+}
+
+.info .info-item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.75rem;
+}
+
+.info .info-item .icon {
+  width: 1.5rem;
+}
+
+.info .info-item #circles-1,
+.info .info-item #circles-2,
+.info .info-item #circles-3 {
+  fill: #fff;
+}
+
+.info .info-item a,
+.info .info-item p {
+  padding: 0.625rem;
+  width: 100%;
+}
+
+.pop {
+  position: absolute;
+  width: 80%;
+  height: 60%;
+  background-color: #fff;
+  border: 6px solid #5a5953;
+  z-index: 999999999999999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pop .loader {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #1e1e20;
+  border-radius: 50% 50% 50% 0;
+  -webkit-animation: rotate 1s linear infinite;
+          animation: rotate 1s linear infinite;
+  margin-bottom: 24px;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.pop .response {
+  font-size: 1rem;
+  color: #1e1e20;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.container {
+  -webkit-box-shadow: 0 3.75rem 7.5rem -1.875rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3.75rem 7.5rem -1.875rem rgba(0, 0, 0, 0.4);
+  position: relative;
+  background-color: #fff;
+}
+
+.menu {
+  width: 2.625rem;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+
+.form {
+  width: 34.875rem;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social {
+  width: 8rem;
+  height: 25rem;
+  background-color: #ffdf3c;
+}
+
+.info {
+  position: absolute;
+  width: 18.75rem;
+  height: 17.625rem;
+  background-color: #1e1e20;
+  right: 0;
+}
+
+@media screen and (max-width: 860px) {
+  html {
+    font-size: 18px;
+  }
+  body {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .menu {
+    width: 100%;
+    height: 4.5rem;
+    padding: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu .menu-icon {
+    width: 40%;
+  }
+  .social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 6rem;
+    width: 100%;
+    padding: 0 30%;
+  }
+  .social .logos {
+    padding: 0 1rem;
+  }
+  .form {
+    width: 100%;
+  }
+  .info {
+    height: 20rem;
+    top: calc(50% - 10rem);
+  }
+  .pop {
+    width: 80%;
+    height: 50vh;
+    top: 25vh;
+  }
+  .pop .response {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 18px;
+  }
+  .form {
+    width: 100%;
+    margin: 2rem 0;
+    height: 100%;
+  }
+  .form form {
+    width: 100%;
+    margin: 0;
+    padding: 0 4rem;
+  }
+  .form form input {
+    margin-bottom: 1.25rem;
+  }
+  .form form textarea {
+    min-height: 8rem;
+    max-height: 8rem;
+    resize: none;
+  }
+  .form form input[type="submit"] {
+    margin-top: 2rem;
+  }
+  .info {
+    position: relative;
+    width: 100%;
+    padding: 1.875rem 4rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .form form {
+    padding: 0 2rem;
+  }
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Form</title>
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- Empty favicon, remember to change! -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,iVBORw0KGgo="
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Prism</title>
+            <path
+              d="M229.73 45.88L37.53 327.79a31.79 31.79 0 0011.31 46L241 476.26a31.77 31.77 0 0029.92 0l192.2-102.51a31.79 31.79 0 0011.31-46L282.27 45.88a31.8 31.8 0 00-52.54 0zM256 32v448"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="32"
+            />
+          </svg>
+        </div>
+        <div class="menu-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Menu</title>
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="32"
+              d="M80 160h352M80 256h352M80 352h352"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="form">
+        <form>
+          <h1>Contactanos</h1>
+          <p>
+            AUDIEXPORT| Confidencialidad a la hora de auditar
+          </p>
+          <label for="name" data-label="0">Name</label>
+          <input
+            class="input"
+            data-input="0"
+            type="text"
+            name="name"
+            id="name"
+            required
+          />
+
+          <label for="email" data-label="1">Email</label>
+          <input
+            class="input"
+            data-input="1"
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
+
+          <label for="message" data-label="2">Message</label>
+          <textarea
+            class="input"
+            data-input="2"
+            name="message"
+            id="message"
+            cols="30"
+            rows="1"
+            required
+          ></textarea>
+
+          <input type="hidden" name="_template" value="box" />
+
+          <input type="submit" value="Send" />
+        </form>
+
+<script>
+    const d = document,
+  $inputs = d.querySelectorAll(".input"),
+  $labels = d.querySelectorAll("label");
+
+for (let i = 0; i < $inputs.length; i++) {
+  if ($inputs[i].value) {
+    $labels[i].classList.add("selected");
+  }
+}
+
+const focus = (num) => {
+  for (let i = 0; i < $labels.length; i++) {
+    if ($labels[i].dataset.label === num) {
+      $labels[i].classList.add("selected");
+    } else {
+      if ($inputs[i].value === "") {
+        $labels[i].classList.remove("selected");
+      }
+    }
+  }
+};
+
+for (let i = 0; i < $inputs.length; i++) {
+  $inputs[i].addEventListener("focus", (e) => {
+    let dataInput = $inputs[i].dataset.input;
+    focus(dataInput);
+  });
+  $inputs[i].addEventListener("focusout", (e) => {
+    focus(-1);
+  });
+}
+
+d.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const $loader = d.querySelector(".loader"),
+    
+    $form = d.querySelector("form"),
+    $response = d.querySelector(".response");
+
+
+
+  fetch("https://formsubmit.co/1842d63db9102af9b775bc2e66cb0067", {
+    method: "POST",
+    body: new FormData(e.target),
+  })
+    .then((response) =>
+      response.ok ? response.json() : Promise.reject(response)
+    )
+    .then((json) => {
+      $loader.classList.add("none");
+      $response.innerHTML = `<p>${json.message}</p>`;
+      $form.reset();
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  
+   
+});
+</script>
