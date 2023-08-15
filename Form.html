@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0044)https://castroauditores.co/php/form/form.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>PHP FormMail Generator - A free tool to create ready-to-use web email forms with file upload, auto-response email, and dependent dropdowns.</title>
+    
+    <meta name="keywords" content="PHP FormMail Generator, Free Form, Form Builder, Form Creator, phpFormMailGen, Customized Web Forms, phpFormMailGenerator,formmail.php, formmail.pl, formMail Generator, ASP Formmail, ASP form, PHP Form, Generator, phpFormGen, phpFormGenerator, anti-spam, web hosting">
+    <meta name="description" content="PHP formMail Generator - A tool to ceate ready-to-use web forms in a flash">
+    <meta name="generator" content="PHP Mail Form Generator, phpfmg.sourceforge.net">
+    <link rel="stylesheet" href="Css/Button.css">
+</head>
+<body>
+
+<style type="text/css">
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size : 13px;
+    color : #474747;
+    background-color: transparent;
+    margin: 0 auto;
+}
+select, option { font-size:16px; }
+
+ol.phpfmg_form { list-style-type: none; padding: 0; margin: 0; }
+ol.phpfmg_form input, ol.phpfmg_form textarea { border-radius: 5px; }
+ol.phpfmg_form li {
+    clear:both;
+    display:block;
+    overflow:hidden;
+	width: 100%
+}
+.form_field, .form_required { font-weight : bold; }
+.form_submit_block { padding-top: 3px; }
+.text_box, .text_area {
+    width:400px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #222;
+    outline: none;
+    border: none;
+    margin: 25px 0 0 0;
+    padding: 5px 20px;
+    transition: all 0.15s ease-in;
+}
+.text_box1 { margin: 0; }
+.text_box { height: 63px; }
+.text_area { height:100px; padding: 15px 20px 5px 20px; }
+.text_box:focus, .text_area:focus { background: #454545; color: #fff; transition: all 0.3s ease-out; }
+.form_error_title { font-weight: bold; color: #a80000; }
+.form_error {
+    background: #F4F6E5;
+    border: 1px dashed #555;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.form_error_highlight { background-color: #F4F6E5; border-bottom: 1px dashed #ff0000; }
+div.instruction_error { color: red; font-weight:bold; }
+hr.sectionbreak { height:1px; color: #ccc; }
+#frmFormMailContainer input[type="submit"] {
+    padding: 13px 45px; 
+    font-weight: bold;
+    background: #999;
+    outline: none;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+#frmFormMailContainer input[type="submit"]:hover { background: #224181; transition: all 0.3s ease-out; }
+#thank_you_msg {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1em;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    padding: 90px 0 0 0;
+}
+    
+.text_box { height: 35px !important; font-size: 1.3em !important; margin: 2px auto !important; border-radius: 3px !important; padding: 8.5px 20px !important; }
+.text_area { height: 100px !important; padding: 15px 20px !important; font-size: 1.3em !important; margin: 2px auto !important; border-radius: 3px !important; }
+
+@media only screen and (max-width: 979px) {
+    .text_box, .text_area { width:91%; }
+}
+@media only screen and (max-width: 735px) {
+    .text_box, .text_area { width:88%; }
+}
+@media only screen and (max-width: 479px) {
+    .text_box, .text_area { width:87%; margin: 7px auto; }
+}
+    
+</style>
+
+<div class="form_description">
+
+</div>
+
+
+
+<div id="frmFormMailContainer">
+    <form name="frmFormMail" id="frmFormMail" target="submitToFrame" action="https://formsubmit.co/jhoansebastianbarreravanegas@gmail.com" method="POST">
+        <input type="hidden" name="formmail_submit" value="Y">
+    
+        <div class="field_block" id="field_0_div">
+            <div class="col_field">
+                <input type="text" name="field_0" id="field_0" placeholder="Nombre" autocomplete="off" value="" class="text_box text_box1">
+            </div>
+        </div>
+    
+        <div class="field_block" id="field_1_div">
+            <div class="col_field">
+                <input type="text" name="field_1" id="field_1" placeholder="Email" autocomplete="off" value="" class="text_box">
+            </div>
+        </div>
+    
+        <div class="field_block" id="field_2_div">
+            <div class="col_field">
+                <input type="text" name="field_2" id="field_2" placeholder="Teléfono" autocomplete="off" value="" class="text_box">
+            </div>
+        </div>
+    
+        <div class="field_block" id="field_3_div">
+            <div class="col_field">
+                <textarea name="field_3" id="field_3" placeholder="Mensaje" rows="4" cols="25" class="text_area"></textarea>
+            </div>
+        </div>
+    
+        <input id="enviar_info" type="submit" value="Enviar"/>
+    </form>
+    
+</div>   
