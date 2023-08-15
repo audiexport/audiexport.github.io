@@ -101,7 +101,6 @@ hr.sectionbreak { height:1px; color: #ccc; }
 
 </div>
 
-
 <div id="frmFormMailContainer">
     <form name="frmFormMail" id="frmFormMail">
         <input type="hidden" name="formmail_submit" value="Y">
@@ -132,29 +131,35 @@ hr.sectionbreak { height:1px; color: #ccc; }
     
         <button id="enviar_info">Enviar</button>
     </form>
-    
 </div>
 
 <script>
     const form = document.getElementById('frmFormMail');
     const enviarButton = document.getElementById('enviar_info');
 
-    enviarButton.addEventListener('click', (event) => {
+    enviarButton.addEventListener('click', async (event) => {
         event.preventDefault(); // Evitar el comportamiento por defecto del botón
         
         const formData = new FormData(form);
 
-        fetch('https://formsubmit.co/1842d63db9102af9b775bc2e66cb0067', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Manejar la respuesta si es necesario
-            console.log('Respuesta del servidor:', data);
-        })
-        .catch(error => {
-            console.error('Error:', error);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
         });
+    
+        try {
+            const response = await fetch('https://formsubmit.co/1842d63db9102af9b775bc2e66cb0067', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const responseData = await response.json();
+            console.log('Respuesta del servidor:', responseData);
+        } catch (error) {
+            console.error('Error:', error);
+        }
     });
 </script>
