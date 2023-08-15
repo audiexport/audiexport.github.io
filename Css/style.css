@@ -253,11 +253,11 @@ input[type="button"],
 
 
 #uno, #dos, #tres, #cuatro, #cinco { width: 1920px; height: 455px; display: block; background-size: cover; position: relative; }
-#uno { background: url(../images/slick-inicio/Imagen1.png) no-repeat top center #d3d4d6; background-size: cover; }
-#dos { background: url(../images/slick-inicio/Imagen2.jpg) no-repeat top center #d3d4d6; background-size: cover; }
-#tres { background: url(../images/slick-inicio/Imagen3.jpg) no-repeat top center #d3d4d6; background-size: cover; }
-#cuatro { background: url(../images/slick-inicio/Imagen4.jpg) no-repeat top center #d3d4d6; background-size: cover; }
-#cinco { background: url(../images/slick-inicio/Imagen5.jpg) no-repeat top center #d3d4d6; background-size: cover; }
+#uno { background: url(../Images/slick-inicio/Imagen1.png) no-repeat top center #d3d4d6; background-size: cover; }
+#dos { background: url(../Images/slick-inicio/Imagen2.jpg) no-repeat top center #d3d4d6; background-size: cover; }
+#tres { background: url(../Images/slick-inicio/Imagen3.jpg) no-repeat top center #d3d4d6; background-size: cover; }
+#cuatro { background: url(../Images/slick-inicio/Imagen4.jpg) no-repeat top center #d3d4d6; background-size: cover; }
+#cinco { background: url(../Images/slick-inicio/Imagen5.jpg) no-repeat top center #d3d4d6; background-size: cover; }
 
 .slick { display: block; overflow: hidden; position: relative; }
 .slick .contenedor-slick { width: 100%; height: 455px; display: block; margin: 0; position: absolute; top: 0; left: 0; z-index: 5; }
