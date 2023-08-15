@@ -1,0 +1,64 @@
+.news-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  .container {
+    
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .news-container {
+    display: block; 
+  }
+  
+  .news-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .news-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .news-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.4;
+      }
+
+      .field_block {
+        margin-bottom: 10px;
+        list-style: none; /* Eliminar las viñetas predeterminadas */
+        position: relative; /* Para posicionar las viñetas personalizadas */
+    }
+
+    /* Estilo de las viñetas personalizadas */
+    .field_block::before {
+        content: "\2022"; /* Código unicode para la viñeta • */
+        font-size: 18px;
+        position: absolute;
+        left: -20px; /* Ajustar la posición de la viñeta */
+        top: 50%; /* Centrar verticalmente */
+        transform: translateY(-50%);
+        color: rgb(0, 0, 0); /* Color de la viñeta */
+    }
+

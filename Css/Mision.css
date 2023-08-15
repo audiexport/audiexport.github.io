@@ -1,0 +1,37 @@
+.mission-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+
+  .mission-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mission-title {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .mission-description {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .mission-section {
+      padding: 30px;
+    }
+
+    .mission-title {
+      font-size: 20px;
+    }
+
+    .mission-description {
+      font-size: 16px;
+    }
+  }

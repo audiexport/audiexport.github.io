@@ -1,0 +1,23 @@
+.mission-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
